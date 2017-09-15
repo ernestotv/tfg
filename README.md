@@ -6,7 +6,8 @@ Para poder utilizar Firebase se debe cambiar la configuración existente (ya que
 Cada proyecto se debe ejecutar por separado, es decir, el proyecto del mapa se ejecutará con los comandos de Angular 4 y la aplicación móvil con los comandos de IONIC 3.
 
 Ejemplo: Carpeta mapa -> en el directorio en el que se encuentra la carpeta "mapa", ejecutar el comando "ng serve"
-         Carpeta movil -> en el directorio en el que se encuentra la carpeta "movil", ejecutar el comando "ionic serve"
+        
+        Carpeta movil -> en el directorio en el que se encuentra la carpeta "movil", ejecutar el comando "ionic serve"
 
 Una vez ejecutado una carpeta faltará instalar las dependencias mediante: npm install 
 
