@@ -1,0 +1,52 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <h1 class="navbar-brand">WebRTC </h1>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <input class="form-control mr-sm-2" name="nombreVideo" [(ngModel)]="nombreVideo" type="text" placeholder="Nombre del video">
+          <button class="btn btn-outline-success my-2 my-sm-0 " type="button" (click)="buscar()" type="button">Buscar</button>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-success" data-toggle="collapse" href="#opciones" aria-expanded="false" aria-controls="opciones">
+            Filtro de búsqueda
+          </a>
+        </li>
+      </ul>
+    </form>
+  </div>
+</nav>
+
+<div class="collapse" id="opciones">
+  <div class="card card-block">
+    <div>
+      <div class="form-group">
+        <label for="usuario" class="col-2 col-form-label">Usuario</label>
+        <input class="form-control" name="ususario" [(ngModel)]="usuario" type="text" placeholder="Nombre...">
+        <!--formControlName="nombre"> -->
+      </div>
+      <div class="form-group">
+
+        <label for="tematica" class="col-2 col-form-label">Temática</label>
+        <select class="form-control colorPersonalizado" id="tematica" name="tematica" [(ngModel)]="tematica">
+            <option value="5">Todos</option>
+            <option value="0">Espectáculos</option>
+            <option value="1">Música</option>
+            <option value="2">Deportes</option>
+            <option value="3">Noticias</option>
+            <option value=4>Otros</option>
+       </select>
+      </div>
+      <div class="form-group row">
+        <div class="input-group col-md-6  offset-md-3">
+          <button type="submit" class="btn btn-outline-success buttonSave" data-toggle="collapse" href="#opciones" aria-expanded="false" aria-controls="opciones">
+          Guardar
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

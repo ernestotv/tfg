@@ -1,0 +1,50 @@
+<ion-content padding>
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Configuración</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-title>Personalización</ion-title>
+
+  <ion-list no-border>
+
+    <ion-item>
+      <ion-label color="danger">*</ion-label>
+      <ion-label> Nombre de usuario: </ion-label>
+     <ion-input type="text" [(ngModel)]="nombreUsuario" name="nombreUsuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="danger">*</ion-label>
+      <ion-label>Título del video: </ion-label>
+     <ion-input type="text" [(ngModel)]="titulo" name="titulo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked >Descripción del video: </ion-label>
+     <ion-textarea maxlength="30000" placeholder="Escribe una descripción del video" [(ngModel)]="descripcion" name="descripcion"></ion-textarea>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list no-border>
+    <ion-item>
+      <ion-toggle [checked]="mostrar" [(ngModel)]="mostrar" ></ion-toggle>
+      <ion-label>
+        Mostrar nombre
+      </ion-label>
+       <ion-icon name="person" item-start></ion-icon>
+    </ion-item>
+
+  <ion-item>
+      <ion-icon ios="ios-videocam" md="md-videocam" item-start></ion-icon>
+    <ion-label>Tipo de video</ion-label>
+    <ion-select [(ngModel)]="tipo" name="tipo">
+      <ion-option *ngFor="let item of tipos;let i=index" [value]="i">{{item}}</ion-option>
+    </ion-select>
+  </ion-item>
+  </ion-list>
+  <button ion-button class="button-block" (click)="agregar()">Guardar</button>
+</ion-content>

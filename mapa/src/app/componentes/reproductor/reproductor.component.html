@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 ">
+      <h5>Usuario: {{marcador.nombre}}</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6"  >
+      <video id="reproductor" autoplay></video>
+      </div>
+      <br />
+    </div>
+  <div class="row">
+    <div class="col-md-6 descripcion">
+      <p>
+        {{ marcador.description}}
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <button class="btn btn-outline-success col-md-4 buttonSpace" (click)="volver()">Volver</button>
+  </div>
+</div>

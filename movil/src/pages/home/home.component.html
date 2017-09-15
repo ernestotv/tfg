@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Video WebRTC</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4 [hidden]="!this._dt.getBloqueado()">
+  Debe ir a la configuración antes de iniciar la emisión.
+</h4>
+  <ion-content padding has-header>
+    <ion-card>
+      <ion-card-content>
+        <video class="video" id="yourVideo" autoplay muted></video>
+      </ion-card-content>
+    </ion-card>
+    <br />
+    <button ion-button block [disabled]="this._dt.getBloqueado()" (click)="presentConfirm()" type="button"> Iniciar </button>
+    <button [disabled]="iniciar" ion-button block (click)="pararRetransmision()" type="button"> Parar </button>
+  </ion-content>

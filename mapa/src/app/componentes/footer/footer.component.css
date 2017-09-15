@@ -1,0 +1,16 @@
+.pieDePagina {
+  background: black;
+  padding: 5px 0;
+  text-align: center;
+  margin-top: 45px;
+}
+.pieDePagina a {
+  color: #70726F;
+  font-size: 20px;
+  padding: 10px;
+  transition: all .5s ease;
+}
+
+.pieDePagina a:hover {
+  color: white;
+}

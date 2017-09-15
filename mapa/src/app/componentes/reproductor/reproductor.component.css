@@ -1,0 +1,7 @@
+.row{
+  display: flex;
+  justify-content: center;
+}
+.descripcion{
+  margin-left: 28px;
+}

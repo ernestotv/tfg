@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-2">
+    <h5>En directo</h5>
+    <hr />
+    <div>
+      <div class="col-lg-6">
+
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item justify-content-between" *ngFor="let marca of _ms.marcadoresLista">
+          {{marca.titulo}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-10">
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+      <span *ngIf="_ms.marcadores">
+  <agm-marker *ngFor="let marca of _ms.marcadores; let i=index"
+  [latitude]="marca.latitud"
+  [longitude]="marca.longitud"
+  [title]="marca.titulo" (markerClick)="clickMarcador(marca)">
+     </agm-marker>
+   </span>
+    </agm-map>
+  </div>
+  <br />

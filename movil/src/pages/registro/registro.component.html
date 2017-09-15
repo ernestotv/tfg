@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Video WebRTC</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding (keyup.enter)="loginCo(user,pass)">
+
+  <ion-card center>
+    <ion-card-header>
+      <h1>Datos del usuario</h1></ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Correo del usuario</ion-label>
+          <ion-input required type="email" name="user" [(ngModel)]="user"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Contraseña</ion-label>
+          <ion-input required type="password" [(ngModel)]="pass" name="pass"></ion-input>
+        </ion-item>
+        <br />
+
+        <div text-center>
+          <button ion-button icon-left (click)="loginCo(user,pass)">
+<ion-icon name="home" ></ion-icon>
+Acceder
+</button>
+          <button ion-button icon-left (click)="crearLog(user,pass)">
+ <ion-icon name="key"></ion-icon>
+<!--<ion-icon name="home" ></ion-icon> -->
+Registrarse
+</button>
+          <button class="btn" ion-button icon-left (click)="restablecer(user)">
+ <ion-icon name="key"></ion-icon>
+<!--<ion-icon name="home" ></ion-icon> -->
+Restablecer contraseña
+</button>
+        </div>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-card text-center>
+    <ion-navbar color="primary">
+      <span class="small contacto center-block">Contacto: tfg.ernesto@gmail.com </span>
+    </ion-navbar>
+  </ion-card>
+</ion-footer>
